@@ -1,10 +1,4 @@
-Summary
-- Features of React
-	Virtual DOM [DOM, Shadow DOM, Virtual DOM]
-	Modular
-	Loosely Coupled & Extensible 
-	Component Based
-- Issues with React
+
 Setup Environment for React:
 1. Your PC must have OS windows 8x, Mac, Linux etc.
 
@@ -14,6 +8,7 @@ Setup Environment for React:
  
     - Node JS is required to build servers, web apps, scripts & command line tools.
     - Node JS provides a package manager called NPM.
+    - Other popular NPM's are :
 		[ Yarn, Bower, Grunt, Compose, Ruby Gems, NuGet ]
     
 3. Check the version of Node & NPM from command prompt
@@ -46,25 +41,25 @@ Create a new Web Application:
 
 3. Setup the file system for Web Application
 
-	a) Generate package.json
+	a. Generate package.json
 	     - Open Terminal & run the command
 	
 			> npm init  -y
 	
 	     - package.json comprises of project meta data.
 	
-	b) Add "README.md"  into project
+	b. Add "README.md"  into project
 
 	    - It is a help document designed by developers for developers.
 
-	c) Add  ".gitignore", It is required for publishing on GIT and ignoring specific set
+	c. Add  ".gitignore", It is required for publishing on GIT and ignoring specific set
 	    of resources.
 
-	d) Add folders
+	d. Add folders
 			- public		: It comprises of static resources [html, images, docs..]
 			- src			: It comprises of dynamic resources [.css, .js, .ts, .scss..]
 
-	e) Add following pages into public folder
+	e. Add following pages into public folder
 	
 			- index.html
 			- home.html
@@ -75,9 +70,9 @@ Setup React for your web application:
 1. Setup library using CDN for legacy React [up to 17x]
 
      - React in page requires following libraries 
-		a) React			[Core Library]
-		b) React DOM		[Virtual DOM Library]
-		c) Babel			[Compiler]
+		a. React			[Core Library]
+		b. React DOM		[Virtual DOM Library]
+		c. Babel			[Compiler]
 
      - React libraries you can get from  "https://legacy.reactjs.org/"
 
