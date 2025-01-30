@@ -8,5 +8,10 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "description": ""
+  "description": "",
+  "dependencies": {
+    "@babel/standalone": "^7.26.7",
+    "react": "18.2",
+    "react-dom": "18.2"
+  }
 }
