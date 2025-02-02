@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Netflix-Clone</title>
+    <script src="../node_modules/react/umd/react.development.js"></script>
+    <script src="../node_modules/react-dom/umd/react-dom.development.js"></script>
+    <script src="../node_modules/@babel/standalone/babel.js"></script>
+
+    <style>
+
+        .bg-main{
+            background-image: url("Netflix-banner.jpeg");
+            width: 100vh;
+            
+        }
+
+        .bg-cover{
+            background-color: rgba(0, 0, 0, .6);
+            height: 100vh;
+        }
+    </style>
+
+    <script type="text/babel">
+
+        function Login()
+        {
+
+        }
+
+        function Background()
+        {
+            return (
+                <div className="bg-main">
+                    <div className="bg-cover">
+                        <Header />
+                    </div>
+                </div>
+            );
+        }
+
+        function Header()
+        {
+            return(
+                <div>
+                    <div className="logo">
+                        Netflix</div>
+                        <div>
+                            <button>Sign in</button></div>
+
+                    </div>
+            )
+        }
+
+        function Main()
+        {
+
+        }
+       ReactDOM.render(<Background />, document.getElementById("root"));
+    </script>
+
+</head>
+<body>
+    
+    <div id="root"></div>
+</body>
+</html>

@@ -81,13 +81,84 @@ Syntax:
        - Classes are heavy lod on application
        - Consume more memory
        - Performence is low
-       - 
+
 	b) JavaScript Function 
 
+
+
 JavaScript Function Topics:
-- Function Declaration
-- Function Expression
-- Function Definition 
+
+1. What is a Function Declaration?
+=> 
+A function declaration is a way to define a named function in JavaScript. 
+It starts with the function keyword followed by the function name, parentheses () for parameters, 
+and curly braces {} to enclose the function's code block.
+
+EX.
+function functionName(parameters) {
+  // Code block to execute
+}
+
+In JavaScript Function declarations are hoisted, 
+meaning they can be called before they are defined in the code also.
+
+
+
+2. What is a Function Expression?
+=>
+A function expression involves creating a function and assigning it to a variable. 
+It does not have a name unless it's a named function expression.
+
+Unlike function declarations, function expressions are not hoisted, 
+meaning you cannot call them before they are defined.
+
+EX.
+const functionName = function(parameters) {
+  // Code block
+};
+
+Function expressions can be anonymous or named.
+You cannot call them before their definition.
+
+EX.
+// This will throw an error
+sayHi("Vikram");
+
+const sayHi = function(name) {
+  console.log(`Hi, ${name}!`);
+};
+Output: Uncaught ReferenceError: Cannot access 'sayHi' before initialization
+
+
+
+3. What is Function Definition?
+=>
+A function definition refers to the creation of a function using either function declaration or function expression.
+In JavaScript, functions can be defined in multiple ways.
+
+Types of Function Definitions:
+
+a. Function Declaration
+
+function greet(name) {
+  console.log(`Hello, ${name}!`);
+}
+greet("Vikram");  // Output: Hello, Vikram!
+
+
+b. Function Expression (Anonymous or Named)
+
+const add = function (a, b) {
+  return a + b;
+};
+console.log(add(2, 3));  // Output: 5
+
+
+c. Arrow Function (ES6)
+
+const multiply = (a, b) => a * b;
+console.log(multiply(4, 5));  // Output: 20
+
 - Function Parameters
 - Rest Parameters
 - Spread Operator
