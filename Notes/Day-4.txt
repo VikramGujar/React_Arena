@@ -76,17 +76,28 @@ Syntax:
 - Functionality is defined by using "JavaScript / TypeScript".
 - React uses JavaScript Extension known as "JSX".
 - React component can be created by using 2 techniques
+  1.Class 
+  2. Object
+
+
 	a) JavaScript Class 
+    => In JavaScript, a class is a blueprint for creating objects. 
+       It provides a way to define the structure and behavior of objects, 
+       including their properties and methods.
+
+       * Why function not recomended for creating components in JavaScript.
        - It is not recomended to write Components using Class
        - Classes are heavy lod on application
        - Consume more memory
        - Performence is low
 
 	b) JavaScript Function 
+    => In JavaScript, a function is a reusable block of code that performs a specific task. 
+       It can take input parameters, perform operations, and return a value. 
 
 
 
-JavaScript Function Topics:
+JavaScript Functions :
 
 1. What is a Function Declaration?
 => 
@@ -101,6 +112,13 @@ function functionName(parameters) {
 
 In JavaScript Function declarations are hoisted, 
 meaning they can be called before they are defined in the code also.
+
+
+
+
+
+
+
 
 
 
@@ -128,6 +146,13 @@ const sayHi = function(name) {
   console.log(`Hi, ${name}!`);
 };
 Output: Uncaught ReferenceError: Cannot access 'sayHi' before initialization
+
+
+
+
+
+
+
 
 
 
@@ -159,9 +184,222 @@ c. Arrow Function (ES6)
 const multiply = (a, b) => a * b;
 console.log(multiply(4, 5));  // Output: 20
 
-- Function Parameters
-- Rest Parameters
-- Spread Operator
+
+d. Method Definition (Inside Objects)
+
+const calculator = {
+  sum(a, b) {
+    return a + b;
+  }
+};
+console.log(calculator.sum(2, 3));  // Output: 5
+
+
+e. Constructor Function (used with new)
+
+function Person(name) {
+  this.name = name;
+}
+const person1 = new Person("Vikram");
+console.log(person1.name);  // Output: Vikram
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+4. What are Function Parameters?
+=>
+Parameters are placeholders defined in the function declaration or expression. 
+They allow you to pass data (arguments) to functions.
+
+function functionName(param1, param2) {
+  // Function body using param1 and param2
+}
+
+function greet(name, message) {
+  console.log(`${message}, ${name}!`);
+}
+
+greet("Vikram", "Hello"); // Output: Hello, Vikram!
+
+
+Key Points:
+
+1. Multiple Parameters: Functions can accept multiple parameters.
+=>
+function add(a, b, c) {
+  return a + b + c;
+}
+console.log(add(1, 2, 3)); // Output: 6
+
+
+2. Default Parameters (ES6): Assign default values if no arguments are provided.
+=>
+function greet(name = "User") {
+  console.log(`Hello, ${name}!`);
+}
+greet();         // Output: Hello, User!
+greet("Vikram"); // Output: Hello, Vikram!
+
+
+3. Rest Parameters (ES6): Collect multiple arguments into an array using ...
+=>
+function sum(...numbers) {
+  return numbers.reduce((acc, num) => acc + num, 0);
+}
+console.log(sum(1, 2, 3, 4)); // Output: 10
+
+
+4. Passing Functions as Parameters (Higher-Order Functions)
+=>
+function executeOperation(a, b, operation) {
+  return operation(a, b);
+}
+
+function multiply(x, y) {
+  return x * y;
+}
+
+console.log(executeOperation(2, 3, multiply)); // Output: 6
+
+
+
+
+
+
+
+
+
+
+
+
+
+5. What are Rest Parameters?
+=> 
+The rest parameter syntax (...) allows a function to accept an indefinite number of arguments as an array. 
+This is especially useful when the number of arguments is dynamic.
+
+function functionName(...restParameters) {
+  // restParameters is an array
+}
+
+function sum(...numbers) {
+  return numbers.reduce((acc, num) => acc + num, 0);
+}
+
+console.log(sum(1, 2, 3, 4, 5)); // Output: 15
+
+Key Points:
+
+1. Always Last: Rest parameters must come at the end of the parameter list.
+=>
+
+function greet(message, ...names) {
+  console.log(`${message} ${names.join(", ")}`);
+}
+
+greet("Hello", "Vikram", "Nikita", "John");
+// Output: Hello Vikram, Nikita, John
+
+2. Difference from Arguments Object:
+=>
+Arguments is an array-like object in older functions but lacks array methods.
+Rest parameters are real arrays and have access to all array methods.
+
+Invalid Example
+This will throw a syntax error because ...rest is not the last parameter:
+=>
+function incorrect(...rest, message) {
+  console.log(message, rest);
+}
+// ❌ Syntax Error: Rest parameter must be last formal parameter
+
+
+
+* Dynamic Operations
+=>
+function calculate(operation, ...numbers) {
+  if (operation === "sum") return numbers.reduce((a, b) => a + b, 0);
+  if (operation === "multiply") return numbers.reduce((a, b) => a * b, 1);
+  return "Invalid operation";
+}
+
+console.log(calculate("sum", 1, 2, 3));      // Output: 6
+console.log(calculate("multiply", 2, 3, 4)); // Output: 24
+
+
+
+
+
+
+
+
+
+
+6. What is the Spread Operator?
+=>
+The spread operator (...) allows you to expand or "spread" elements 
+of arrays, objects, or iterable data into individual elements.
+
+Syntax : ...iterable
+
+
+Key Use Cases :
+
+1️⃣ Copying Arrays
+=>
+const arr1 = [1, 2, 3];
+const arr2 = [...arr1]; // Creates a shallow copy
+
+console.log(arr2); // Output: [1, 2, 3]
+
+arr2.push(4);
+console.log(arr1); // Output: [1, 2, 3] (Original array is unchanged)
+
+
+2️⃣ Merging Arrays
+=>
+const arr1 = [1, 2];
+const arr2 = [3, 4];
+const merged = [...arr1, ...arr2];
+
+console.log(merged); // Output: [1, 2, 3, 4]
+
+
+3️⃣ Spreading Elements in Function Calls
+=>
+function sum(a, b, c) {
+  return a + b + c;
+}
+
+const numbers = [1, 2, 3];
+console.log(sum(...numbers)); // Output: 6
+
+
+4️⃣ Copying and Merging Objects (ES6+)
+=>
+const person = { name: "Vikram", age: 22 };
+const updatedPerson = { ...person, profession: "Developer" };
+
+console.log(updatedPerson);
+// Output: { name: 'Vikram', age: 22, profession: 'Developer' }
+
+
+
+
+
+
+
 - Function Closure 
 - Function Return 
 - Function Currying 
