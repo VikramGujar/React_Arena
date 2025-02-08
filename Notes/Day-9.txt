@@ -124,6 +124,11 @@ Syntax:
 		}
 
 Ex:
+
+
+
+
+
 data-binding.jsx
 
 import { useState } from "react"
