@@ -1,68 +1,93 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Netflix-Clone</title>
+    <title>Home</title>
+    <style>
+        form {
+            border: 1px solid gray;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 2px 2px 2px black;
+            width: 200px;
+            margin: 20px;
+        }
+        nav {
+            display: flex;
+            justify-content: space-between;
+            border: 1px solid gray;
+            padding: 20px;
+        }
+        footer {
+            background-color: black;
+            color:white;
+            text-align: center;
+            padding: 10px;
+        }
+    </style>
     <script src="../node_modules/react/umd/react.development.js"></script>
     <script src="../node_modules/react-dom/umd/react-dom.development.js"></script>
     <script src="../node_modules/@babel/standalone/babel.js"></script>
-
-    <style>
-
-        .bg-main{
-            background-image: url("Netflix-banner.jpeg");
-            width: 100vh;
-            
-        }
-
-        .bg-cover{
-            background-color: rgba(0, 0, 0, .6);
-            height: 100vh;
-        }
-    </style>
-
     <script type="text/babel">
-
+        
         function Login()
         {
-
-        }
-
-        function Background()
-        {
             return (
-                <div className="bg-main">
-                    <div className="bg-cover">
-                        <Header />
-                    </div>
-                </div>
+                <form>
+                    <h3>User Login</h3>
+                    <dl>
+                        <dt>User Name</dt> 
+                        <dd><input type="text" /></dd>
+                        <dt>Password </dt> 
+                        <dd><input type="password"/> </dd> 
+                    </dl>
+                    <button>Login</button>
+                </form>
             );
         }
 
-        function Header()
+        const SearchBar = ()=> (
+            <div>
+                <input type="text" placeholder="Search Netflix.in" />
+                <button>Search</button>
+            </div>
+        )
+
+        const Navbar = () => (
+            <nav>
+                <div>Netflix</div>
+                <div>
+                    <SearchBar />
+                </div>
+                <div> 
+                  <select>
+                    <option>Language</option>
+                    <option>English</option>
+                  </select>    
+                  <button>Sign In</button>
+                </div>
+            </nav>
+        )
+
+        function Footer()
         {
             return(
-                <div>
-                    <div className="logo">
-                        Netflix</div>
-                        <div>
-                            <button>Sign in</button></div>
-
-                    </div>
+                <footer>
+                    &copy; 2025  All right reserved for Netflix
+                </footer>
             )
         }
 
-        function Main()
-        {
-
-        }
-       ReactDOM.render(<Background />, document.getElementById("root"));
+        ReactDOM.render(<section> <Navbar/> <Login/>  <Footer /> </section>, document.getElementById("root"));
     </script>
-
 </head>
 <body>
-    
+    <noscript>Please enable JavaScript on your browser.</noscript>
     <div id="root"></div>
 </body>
 </html>
+
+
+

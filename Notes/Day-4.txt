@@ -395,6 +395,17 @@ console.log(updatedPerson);
 // Output: { name: 'Vikram', age: 22, profession: 'Developer' }
 
 
+5️⃣ Destructuring with Spread
+const [first, ...rest] = [10, 20, 30, 40];
+console.log(first); // Output: 10
+console.log(rest);  // Output: [20, 30, 40]
+
+Difference Between Spread and Rest
+Spread (...): Expands elements.
+Rest (...): Collects multiple elements into an array.
+
+
+
 
 
 
