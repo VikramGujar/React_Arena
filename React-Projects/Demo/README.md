@@ -1,3 +1,0 @@
-# DEMO PROJECT
-
-## Demo project
