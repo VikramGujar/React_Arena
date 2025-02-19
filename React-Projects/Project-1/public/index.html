@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Fisrt React App</title>
+</head>
+<body>
+    <p>React JS is in <a href="home.html">HOME</a> page</p>
+
+    <h2>Implementing React in an Existing Project</h2>
+
+    <p>In this example, we are integrating React into an already developed project using <strong>CDN links</strong>. 
+        This allows us to add React functionalities without setting up a full React development environment.</p>
+
+    <h3>Required Components</h3>
+    <p>To incorporate React into an existing project, we need to import the following three components in the specified order:</p>
+
+    <dl>
+        <dt><strong>React</strong></dt>
+        <dd>Core React Library</dd>
+
+        <dt><strong>React-DOM</strong></dt>
+        <dd>Virtual DOM Library</dd>
+
+        <dt><strong>Babel</strong></dt>
+        <dd>Compiler to transpile JSX code into JavaScript</dd>
+    </dl>
+
+    <p>These components must be included in the same order to ensure proper functionality.</p>
+
+    <h3>Writing React Code</h3>
+    <p>Once the necessary libraries are imported, you can write your React code inside a <code>&lt;script&gt;</code> tag with the attribute <code>type="text/babel"</code>.</p>
+
+    <h3>Example</h3>
+    <p>To render content inside a <code>&lt;div&gt;</code> with the ID <strong>root</strong>, use the following syntax:</p>
+
+    <pre>
+        <code>
+ReactDOM.render("Content to display", document.getElementById("root"));
+        </code>
+    </pre>
+
+    <p>By following this approach, you can seamlessly integrate React into your existing project and enhance its functionality without a complete overhaul.</p>
+
+</body>
+</html>
