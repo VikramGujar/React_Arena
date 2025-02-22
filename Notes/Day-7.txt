@@ -80,7 +80,7 @@ Enable bootstrap for React application:
 		> npm  install  bootstrap   bootstrap-icons --save
 
 2. Go to "index.js" in src folder
-
+ 
   import  '../node_modules/bootstrap-icons/font/bootstrap-icons.css';
   import  '../node_modules/bootstrap/dist/css/bootstrap.css';
   import  bootstrap  from 'bootstrap';				// optional
