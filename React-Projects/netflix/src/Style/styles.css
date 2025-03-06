@@ -1,0 +1,25 @@
+.bg-image {
+    background-image: url("../../public/Netflix-banner.jpeg");
+    height: 100vh;
+    background-size: cover;
+}
+.bg-shade {
+    background-color: rgba(0,0,0,0.7);
+    height: 100vh;
+}
+.brand-title {
+    font-size: 35px;
+    font-weight: bold;
+    color:red;
+}
+main {
+    padding-top: 100px;
+    font-family: Arial;
+}
+.main-title {
+    font-size: 45px;
+    font-weight: bold;
+}
+.main-subtitle {
+    font-size: 22px;
+}
