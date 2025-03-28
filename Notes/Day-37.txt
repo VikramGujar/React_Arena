@@ -1,0 +1,35 @@
+To-Do Application
+
+1. Configure data for application in  db.json [ public folder ]
+
+     {
+       "users": [
+               { "id" : 1,  "userid": ' ',  "password": ' ', "email": ' ' },
+               {                                       }
+             ],
+       "appointments": [
+                {  "id": 1, "title": ' ',  "date": ' ', "description":' ', "userid": ' ' }
+             ]
+      }
+
+
+2. JSON Server creates API routes for your data
+
+    GET                /users                return all users
+    GET                /users/id                return specific user using id
+    POST            /users                add new user into data source
+    PUT                /users/id                edit existing user & update data
+    DELETE            /users/id                removes user using id
+
+    GET                /appointments
+    GET                /appointments/id
+    POST            /appointments
+    PUT                /appointments/id
+    DELETE             /appointments/id
+   
+
+3. Start your API
+
+    >json-server  db.json  --watch  --port=4000
+
+    http://127.0.0.1:4000/users        => GET / POST
